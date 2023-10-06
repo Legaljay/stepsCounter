@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import './App.css'
+import { DateCounter } from '../public/components/dateCounter';
 
 
 const messages = [
@@ -39,6 +40,7 @@ function App() {
         </div>
 
       </div>)}
+      <DateCounter />
     </>
   )
 }
