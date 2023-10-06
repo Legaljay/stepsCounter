@@ -12,7 +12,7 @@ function App() {
    const [isOpen, setIsOpen] = useState(true)
 
    function toggle(){
-    setIsOpen(!isOpen);
+    setIsOpen(is => !is);
    }
   function handlePrevious(){
     setStep((prev) => prev == 1? 1: prev - 1)
