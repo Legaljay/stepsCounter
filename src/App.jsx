@@ -22,7 +22,7 @@ function App() {
     setStep((prev) => prev >= 3 ? 3: prev + 1)
   }
   return (
-    <div>
+    <>
       <button className="close" onClick={toggle}>&times;</button>
       {isOpen && (<div className='steps'>
         <div className='numbers'>
@@ -39,7 +39,7 @@ function App() {
         </div>
 
       </div>)}
-    </div>
+    </>
   )
 }
 
