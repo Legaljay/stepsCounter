@@ -9,9 +9,10 @@ export const DateCounter = () => {
   return (
     <div>
         <div>
-            <button onClick={() => setStep(prev => prev - 1)}>-</button>
+            <input type="range" min='0' max="10" value={step} onChange={(e) => setStep(Number(e.target.value))}/>
+            {/* <button onClick={() => setStep(prev => prev - 1)}>-</button> */}
             <span>Step: {step}</span>
-            <button onClick={() => setStep(prev => prev + 1)}>+</button>
+            {/* <button onClick={() => setStep(prev => prev + 1)}>+</button> */}
         </div>
         <div>
             <button onClick={() => setCount(prevCount => prevCount - step)}>-</button>
