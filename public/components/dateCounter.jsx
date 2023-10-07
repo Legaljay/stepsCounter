@@ -16,7 +16,8 @@ export const DateCounter = () => {
         </div>
         <div>
             <button onClick={() => setCount(prevCount => prevCount - step)}>-</button>
-            <span>Count: {count}</span>
+            <input type="number" value={count} onChange={(e) => setCount(Number(e.target.value))} />
+            {/* <span>Count: {count}</span> */}
             <button onClick={() => setCount(prevCount => prevCount + step)}>+</button>
         </div>
         <p>{ count == 0 ? "today is " : count > 0 ? `${count} days from today is ` : `${Math.abs(count)} days ago was `}{date.toDateString()}</p>
