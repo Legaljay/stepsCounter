@@ -4,6 +4,10 @@ export const DateCounter = () => {
     const [step, setStep] = useState(1)
     const [count, setCount] = useState(0)
 
+    function handleReset(){
+        setStep(1)
+        setCount(0)
+    }
     const date = new Date("june 21 2027")
     date.setDate(date.getDate() + count)
   return (
@@ -21,6 +25,10 @@ export const DateCounter = () => {
             <button onClick={() => setCount(prevCount => prevCount + step)}>+</button>
         </div>
         <p>{ count == 0 ? "today is " : count > 0 ? `${count} days from today is ` : `${Math.abs(count)} days ago was `}{date.toDateString()}</p>
+        {(count !== 0 || step !== 1) ? 
+                (<div>
+                    <button onClick={handleReset}>Reset</button>
+                </div>): null}
     </div>
   )
 }
