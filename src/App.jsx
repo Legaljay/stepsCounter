@@ -42,8 +42,7 @@ function App() {
             bgColor="#7950f2"
             textColor="#fff"
             onClick={handlePrevious}
-            text="Previous"
-          />
+          >Previous</Button>  {/*To access this innertext we use the children keyword prop, check the Button component*/}
           <Button 
             bgColor="#7950f2"
             textColor="#fff"
