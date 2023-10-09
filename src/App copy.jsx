@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import './App.css'
 import { DateCounter } from '../public/components/dateCounter';
-import Button from './Button'
 
 
 const messages = [
@@ -36,20 +35,8 @@ function App() {
         <p className='message'>Step {step}: {messages[step - 1]}</p>
 
         <div className="buttons">
-          {/* <button style={{backgroundColor: "#7950f2", color: "#fff"}} onClick={handlePrevious}>Previous</button>
-          <button style={{backgroundColor: "#7950f2", color: "#fff"}} onClick={handleNext}>Next</button> */}
-          <Button 
-            bgColor="#7950f2"
-            textColor="#fff"
-            onClick={handlePrevious}
-            text="Previous"
-          />
-          <Button 
-            bgColor="#7950f2"
-            textColor="#fff"
-            onClick={handleNext}
-            text="Next"
-          />
+          <button style={{backgroundColor: "#7950f2", color: "#fff"}} onClick={handlePrevious}>Previous</button>
+          <button style={{backgroundColor: "#7950f2", color: "#fff"}} onClick={handleNext}>Next</button>
         </div>
 
       </div>)}
@@ -59,4 +46,4 @@ function App() {
 }
 
 export default App
-
+ 
